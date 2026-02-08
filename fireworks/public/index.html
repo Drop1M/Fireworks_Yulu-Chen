@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Multiplayer Fireworks</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <div id="ui">
+      <div class="row">
+        <div class="label">Colour</div>
+        <div id="colorPicker"></div>
+      </div>
+
+      <div class="row">
+        <div class="label">Size</div>
+        <div id="sizeSlider"></div>
+      </div>
+
+      <div class="row">
+        <div class="label">Shape</div>
+        <div id="shapeSelect"></div>
+      </div>
+
+      <div class="row">
+        <button id="clearHint" type="button" title="Just a hint panel, no clear button (yet).">
+          Tap / Click on the sky to launch ✨
+        </button>
+      </div>
+
+      <div class="small">
+        Works best with multiple devices. If you're on a school network that blocks device-to-device
+        traffic, deploy to Render for a public link.
+      </div>
+    </div>
+
+    <div id="sketch-holder"></div>
+
+    <!-- socket.io client script is served automatically by the server -->
+    <script src="/socket.io/socket.io.js"></script>
+
+    <!-- p5 -->
+    <script src="https://cdn.jsdelivr.net/npm/p5@1.9.4/lib/p5.min.js"></script>
+
+    <script src="sketch.js"></script>
+  </body>
+</html>
